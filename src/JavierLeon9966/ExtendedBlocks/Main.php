@@ -15,7 +15,7 @@ use pocketmine\tile\Tile;
 use pocketmine\network\mcpe\convert\RuntimeBlockMapping;
 use pocketmine\network\mcpe\protocol\{BatchPacket, PacketPool, LevelChunkPacket, UpdateBlockPacket};
 use pocketmine\network\mcpe\NetworkBinaryStream;
-use const pocketmine\RESOURCE_PATH;
+use const pocketmine\BEDROCK_BLOCK_UPGRADE_SCHEMA_PATH;
 
 use JavierLeon9966\ExtendedBlocks\block\{BlockFactory, CustomBlock, Placeholder, NetheriteBlock};
 use JavierLeon9966\ExtendedBlocks\item\ItemFactory;
@@ -31,7 +31,7 @@ class Main extends PluginBase implements Listener{
 	 * Credits to: PresentKim
 	 */
 	private static function registerRuntimeIds(): void{
-		$nameToLegacyMap = json_decode(file_get_contents(RESOURCE_PATH."vanilla/block_id_map.json"), true);
+		$nameToLegacyMap = json_decode(file_get_contents(BEDROCK_BLOCK_UPGRADE_SCHEMA_PATH."block_legacy_id_map.json"), true);
 		$metaMap = [];
 		
 		foreach(RuntimeBlockMapping::getBedrockKnownStates() as $runtimeId => $state){
