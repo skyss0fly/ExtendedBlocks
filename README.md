@@ -1,4 +1,4 @@
-# ExtendedBlocks [![Poggit-CI](https://poggit.pmmp.io/shield.dl/ExtendedBlocks)](https://poggit.pmmp.io/p/ExtendedBlocks)
+# ExtendedBlocks [!
 This plugin adds the compatibility to add more blocks above the 255 ID in Pocketmine API 3.0.0+
 
 ## Archived
